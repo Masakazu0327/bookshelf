@@ -1,0 +1,9 @@
+ja:
+  books:
+    new:
+      title: 書籍登録
+    show:
+      price: 価格
+      price_yen: "¥%{price}"
+      publish_date: 発売日
+      description: 商品の説明
