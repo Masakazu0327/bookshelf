@@ -1,0 +1,12 @@
+<!-- app/views/books/show.html.erb -->
+
+<div class="col-md-10 offset-md-1 mt-5">
+  <h2><%= @book.title %></h2>
+  <ul>
+    <li><b>価格: </b><%= number_with_delimiter @book.price %>円</li>
+    <li><b>発売日: </b><%= @book.publish_date %></li>
+  </ul>
+  <hr>
+  <h4>商品の説明</h4>
+  <%= simple_format @book.description %>
+</div>

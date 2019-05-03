@@ -1,3 +1,5 @@
+<!-- app/views/layouts/application.html.erb -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,10 +12,16 @@
   </head>
 
   <body>
-    <%= render "shared/header"  %>
+    <%= render "shared/header" %>
     <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render "shared/flash" %>
+      </div>
+    </div>
       <div class="row">
         <%= yield %>
       </div>
+    </div>
   </body>
 </html>

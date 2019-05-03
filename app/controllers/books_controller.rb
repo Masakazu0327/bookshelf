@@ -1,3 +1,5 @@
+# app/controllers/books_controller.rb
+
 class BooksController < ApplicationController
   def index
     @books = Book.all
@@ -5,18 +7,20 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-  end
-
+  end 
   def create
     @book = Book.new(book_params)
-    @book.save
-    redirect_to @book, notice: "書籍を登録しました。"
+    if @book.save
+        redirect_to @book, notice: "書籍を登録しました。"
+    else
+        render :new
+    end
+  end 
+  def show
+    @book = Book.find(params[:id])
   end
-
-  private
-
+  private 
   def book_params
     params.require(:book).permit(:title, :price, :publish_date, :description)
   end
-
 end
