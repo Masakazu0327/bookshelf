@@ -21,7 +21,14 @@ ja:
         password_confirmation: パスワード再入力
         current_password: 現在のパスワード
         remember_me: ログイン情報を記録する
-
+      review:
+        title: タイトル
+        body: 本文
+        evaluation: 評価
+        book_id: 書籍
+        book: 書籍
+        user_id: ユーザー
+        user: ユーザー
 
     errors:
       messages:
