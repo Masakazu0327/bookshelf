@@ -1,0 +1,18 @@
+<div>
+  <div>
+    <% if review.user.avatar.attached? %>
+      <%= image_tag review.user.avatar.variant(resize: "60x60"), class: "img-thumbnail" %>
+    <% else %>
+      <%= image_tag "no_image.png", class: "img-thumbnail", width: 60 %>
+    <% end %>
+    <span><%= review.user.nick_name %></span>
+  </div>
+  <div>
+    <div>
+      <span class="text-warning"><%= "★" * review.evaluation %></span>
+      <b><%= link_to review.title, book_review_path(review.book, review) %></b>
+    </div>
+    <small><%= review.created_at.strftime("%Y年%m月%d日") %></small>
+  </div>
+  <%= simple_format review.body %>
+</div>

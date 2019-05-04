@@ -1,0 +1,19 @@
+<!-- app/views/reviews/_form.html.erb -->
+
+<%= form_with model: [book, review], local: true do |form| %>
+  <%= render "shared/errors", obj: review %>
+  <div class="form-group">
+    <%= form.label :evaluation %>
+    <%= form.select :evaluation, Review.evaluations.values, {}, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.text_area :body, rows: 10, class: "form-control" %>
+  </div>
+  <%= form.submit class: "btn btn-primary" %>
+  <%= link_to t(".back"), book, class: "btn btn-secondary" %>
+<% end %>
