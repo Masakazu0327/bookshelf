@@ -7,3 +7,9 @@ ja:
       price_yen: "¥%{price}"
       publish_date: 発売日
       description: 商品の説明
+      edit: 編集
+      return: 戻る
+
+
+
+
