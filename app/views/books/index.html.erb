@@ -6,3 +6,7 @@
     <p><%= truncate(book.description, length: 20) %></p>
   </div>
 <% end %>
+
+  <div class="col-12">
+    <%= paginate @books %>
+  </div>
