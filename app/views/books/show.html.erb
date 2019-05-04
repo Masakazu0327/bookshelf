@@ -9,6 +9,7 @@
       <ul>
         <li><b><%= t '.price' %>: </b><%= t('.price_yen', price: (number_with_delimiter @book.price)) %></li>
         <li><b><%= t '.publish_date' %>: </b><%= @book.publish_date %></li>
+        <li><b><%= t ".category" %>: </b><%= @book.category&.name %></li>
       </ul>
     </div>
   </div>
